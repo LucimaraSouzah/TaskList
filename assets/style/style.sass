@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:wght@500&display=swap')
+
+$font-title:'Parisienne', cursive
+$font-text:'Playfair Display', serif 
+$text: #e9efc0
+$button: #b4e197
+$task: #83bd75
+$background: #4e944f
+$border: #335e34
+
+* 
+    background-color:$background
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body 
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100vw
+    margin-top:30px
+    background-attachment: fixed
+    overflow-x: hidden
+
+.content    
+    height: max-content
+    background: rgba(78, 148, 79, 0.21)
+    border-radius: 16px
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(8.7px)
+    -webkit-backdrop-filter: blur(8.7px)
+    padding: 10px 150px 50px
+    overflow: hidden
+
+.title 
+    margin: 10px
+    font-size:30px
+    color:$text
+    font-family: $font-title
+
+.addTask 
+    display: flex
+    align-items: center
+
+.newTask 
+    width: 100%
+    padding: 5px
+    border-radius: 12px
+    outline: none
+    border: 1px solid $border
+    color: $text
+    padding: 12px
+
+.newTask::placeholder
+    color: $text
+    font-family: $font-text
+    padding-left: 2px
+
+.confirmTask, .editTask, .deleteTask 
+    border-radius: 12px
+    cursor: pointer
+    background-repeat: no-repeat
+    background-position: center
+    border: none
+    object-fit: cover
+
+.confirmTask 
+    height: 50px
+    width: 50px
+    background-image: url(../image/plus.svg)
+
+.editTask 
+    height: 26px
+    width: 26px
+    background-image: url(../image/edit.svg)
+
+.deleteTask
+    height: 26px
+    width: 26px
+    background-image: url(../image/delete.svg)
+
+.confirmTask
+    &:hover 
+        background-image: url(../image/plus\ hover.svg)
+
+.editTask
+    &:hover 
+        background-image: url(../image/edit\ hover.svg)
+
+.deleteTask
+    &:hover 
+        background-image: url(../image/delete\ hover.svg)
+
+
+.listTask
+    margin: 10px 0px
+
+    
+.listTask li 
+    background-color: $task
+    border-radius: 12px
+    padding: 5px
+    margin-top: 10px
+    width: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.listTask span 
+    background-color: $task
+    font-family: $font-text
+    color: $text
+    padding: 2px
+
+.icon 
+    background-color: $task
+    display: flex
+    gap: 5px
+
+.icon img 
+    width: 25px
+    background-color: $task
+    cursor: pointer
+
+.windowEdit 
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 20px
+    background: #2e572f
+    border: 1px solid #2f2e2e
+    width: 415px
+    border-radius: 12px
+    z-index: 200
+    display: none 
+
+.windowBackg 
+    position: fixed
+    top: 0
+    background-color: #000
+    bottom: 0
+    left: 0
+    opacity: 0.9
+    z-index: 100
+    right: 0
+    display: none
+
+.editClose 
+    position: absolute
+    top: -25px
+    right: -18px 
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 1px solid #172c18
+    background-color: #2e572f
+    color: #FFF
+    outline: none
+    cursor: pointer
+
+
+.textEdit 
+    background-color: #2e572f
+
+
+form 
+    width: 100%
+    margin-top: 20px
+    background-color: #2e572f
+
+
+.formEdit 
+    display: flex
+    flex-direction: column
+    margin-bottom: 20px
+    background-color: #2e572f
+
+    label 
+        margin-bottom: 7px
+        background: #2e572f
+        
+    input 
+        padding: 15px
+        border-radius: 12px
+        outline: none
+        border: 1px solid #172c18
+        font-size: 1.2rem
+        background-color: #2e572f
+        color: #FFF
+
+
+.confirmAtt 
+    background-color: #2e572f
+    display: flex
+
+    button  
+        flex: 1
+        background-color: #2e572f
+        border: 1px solid #172c18
+        padding: 7px
+        margin-bottom: 10px
+        border-radius: 12px
+        color: #CCC
+        cursor: pointer
+        height: 50px
+        font-size: 1.3rem
+        outline: none
+
+        &:hover
+            background-color: #172c18
