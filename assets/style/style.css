@@ -114,6 +114,11 @@ body {
   font-family: "Playfair Display", serif;
   color: #e9efc0;
   padding: 2px;
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
 }
 
 .icon {

@@ -18,8 +18,12 @@ inputNewTask.addEventListener('keypress', (e)=> {
             name: inputNewTask.value,
             id: generateID(),
         }
-        addTask(task);
-    }   
+        if (inputNewTask.value != '') {
+            addTask(task);
+        } else {
+            alert ('Digite uma tarefa!')
+        }
+    }  
 });
 
 
@@ -28,7 +32,11 @@ buttonAdd.addEventListener('click', (e)=>{
         name: inputNewTask.value,
         id: generateID(),
     }
-    addTask(task);
+    if (inputNewTask.value != '') {
+        addTask(task);
+    } else {
+        alert ('Digite uma tarefa!')
+    }
 });
 
 function generateID() {
@@ -48,6 +56,9 @@ function create(task) {
     let span = document.createElement('span');
         span.classList.add('textTask');
         span.innerHTML = task.name;
+        span.onclick = function(){
+           this.classList.toggle('checked')
+    }
 
     let div = document.createElement('div');
         div.classList.add('icon');
