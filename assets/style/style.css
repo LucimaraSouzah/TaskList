@@ -232,8 +232,12 @@ form {
   }
 
   .content {
-    padding: 10px;
+    padding: 20px;
     text-align: left;
+  }
+
+  .windowEdit {
+    width: 350px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -242,7 +246,9 @@ form {
   }
 
   .content {
-    padding: 50px;
+    padding: 80px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 }
 
